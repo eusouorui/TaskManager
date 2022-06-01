@@ -52,12 +52,15 @@ function addItemToList() {
     ul.appendChild(buttonDelete);
 }
 
-function setTaskDone() {
-    alert("Task Done");
+function setTaskDone(button) {
+    button.prev('li');
 }
 
 function setTaskDeleted(button) {
 
     button.setAttribute('hidden', ''); 
-    //todo rd remove done button and list item    
+    var doneButton = $(button).prev('button')[0];
+    doneButton.setAttribute('hidden', '');
+    var listItem = $(doneButton).prev('li')[0];
+    listItem.setAttribute('hidden', '');
 }
