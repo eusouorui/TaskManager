@@ -1,0 +1,90 @@
+/* 
+* Pallete:
+* 15133C
+* 73777B
+* EC994B
+* F1EEE9
+*/
+
+body {
+    background-color: #15133C;
+    font-family: monospace;
+    color: #F1EEE9;
+}
+
+.addItemDiv {
+    padding: 10px;
+}
+
+.addItemDiv button {
+    padding: 10px;
+    background-color: #EC994B;
+    border-color: #EC994B;
+    border-radius: 8px;
+}
+
+.addItemDiv button:hover {
+    border: solid #F1EEE9;
+    color: #F1EEE9;
+    padding: 9px;
+}
+
+.addItemDiv button:active {
+    border: solid #15133C;
+    color: #15133C;
+    padding: 9px;
+}
+
+.addItemDiv input {
+    padding: 10px;
+}
+
+.toDoList {
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.toDoList li {
+    margin-top: 10px;
+}
+
+.toDoList button {
+    margin-left: 10px;
+    margin-top: 5px;
+    background-color: #EC994B;
+    border-color: #EC994B;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.toDoList button:hover {
+    border: solid #F1EEE9;
+    color: #F1EEE9;
+    padding: 4px;
+}
+
+.toDoList button:active {
+    border: solid #15133C;
+    color: #15133C;
+}
+
+.borderlessCenterDiv {
+    margin-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.listItem {
+    padding-left: 15px;
+}
+
+.borderCenterDiv {
+    font-size: 20px;
+    margin: auto;
+    width: 50%;
+    border: 5px solid #EC994B;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
