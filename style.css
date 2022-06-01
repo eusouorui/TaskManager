@@ -12,6 +12,10 @@ body {
     color: #F1EEE9;
 }
 
+.title {
+    padding: 10px;
+}
+
 .addItemDiv {
     padding: 10px;
 }
@@ -42,6 +46,7 @@ body {
 .toDoList {
     font-size: 20px;
     margin-left: 20px;
+    margin-right: 20px;
 }
 
 .toDoList li {
@@ -55,6 +60,7 @@ body {
     border-color: #EC994B;
     border-radius: 8px;
     padding: 5px;
+    font-size: 18px;
 }
 
 .toDoList button:hover {
