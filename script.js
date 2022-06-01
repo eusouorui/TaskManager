@@ -58,6 +58,9 @@ function addItemToList() {
     ul.appendChild(li);
     ul.appendChild(buttonDone);
     ul.appendChild(buttonDelete);
+
+    todoInput.focus();
+    todoInput.select();
 }
 
 function setTaskDone(button) {
