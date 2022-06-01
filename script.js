@@ -27,9 +27,9 @@ function addItemToList() {
 
     var defaultItem = document.getElementById('defaultItem');
     if (defaultItem != undefined) {
-        defaultItem.setAttribute('hidden', '');
-        document.getElementById('defaultDoneButon').setAttribute('hidden', '');
-        document.getElementById('defaultDeleteButon').setAttribute('hidden', '');
+        defaultItem.remove();
+        document.getElementById('defaultDoneButon').remove();
+        document.getElementById('defaultDeleteButon').remove();
     }
 
     var ul = document.getElementById("list");
@@ -38,26 +38,40 @@ function addItemToList() {
     li.id = todoText;
     li.textContent = todoText;
     li.className = "listItem";
-    ul.appendChild(li);
+
     //create buttons
     var buttonDone = document.createElement("button");
     var buttonDelete = document.createElement("button");
-    buttonDone.id = "done"+todoText;
-    buttonDelete.id = "delete"+todoText;
-    buttonDone.textContent = "Done";
-    buttonDelete.textContent = "Delete";
+
+    buttonDone.id = "done" + todoText;
+    buttonDelete.id = "delete" + todoText;
+
+    buttonDelete.title = "Permanently Delete";
+
+    buttonDone.innerHTML = '<i class="fa fa-check"></i>';
+    buttonDelete.innerHTML = '<i class="fa fa-trash-o"></i>';
+
     buttonDone.setAttribute('onclick', 'setTaskDone(this);');
     buttonDelete.setAttribute('onclick', 'setTaskDeleted(this);');
+
+    ///append html
+    ul.appendChild(li);
     ul.appendChild(buttonDone);
     ul.appendChild(buttonDelete);
 }
 
-function setTaskDone() {
-    alert("Task Done");
+function setTaskDone(button) {
+    var listItem = $(button).prev('li')[0];
+
+    listItem.innerHTML = listItem.innerHTML.strike();
 }
 
 function setTaskDeleted(button) {
 
-    button.setAttribute('hidden', ''); 
-    //todo rd remove done button and list item    
+    var doneButton = $(button).prev('button')[0];
+    var listItem = $(doneButton).prev('li')[0];
+
+    button.remove();
+    doneButton.remove();
+    listItem.remove();
 }

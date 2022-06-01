@@ -7,28 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./style.css">
     <title>Index</title>
 </head>
 
 <body onload="initFunction();">
 
-    <div class="borderCenterDiv">
-        <div class="borderlessCenterDiv">
-            <h1>To Do List:</h1>
-        </div>
-        <ul id="list" class="toDoList">
-            <li id="defaultItem" class="listItem">Write your tasks on the text box bellow</li>
-            <button id="defaultDoneButon">Done</button> <button id="defaultDeleteButon">Delete</button>
-        </ul>
-        <br>
-        <br>
-        <div class="addItemDiv">
-            <div class="borderlessCenterDiv">
-                <input id="toDoInput"  type="text" placeholder="Write what to do">
-                <button name="addItem" id="addButton" class="addButton" onclick="addItemToList()">Add Task</button>
-            </div>
-        </div>
+    <h1 class="title">To Do List:</h1>
+    <ol id="list" class="toDoList">
+        <li id="defaultItem" class="listItem">Write your tasks on the text box bellow</li>
+        <button id="defaultDoneButon"><i class="fa fa-check"></i></button> <button id="defaultDeleteButon"><i class="fa fa-trash-o"></i></button>
+    </ol>
+    <br>
+    <br>
+    <div class="addItemDiv">
+        <input id="toDoInput" type="text" placeholder="Write what to do">
+        <button name="addItem" id="addButton" class="addButton" onclick="addItemToList()">Add Task</button>
     </div>
 </body>
 
